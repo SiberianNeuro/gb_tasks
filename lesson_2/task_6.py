@@ -47,7 +47,9 @@ if input('Провести аналитику товаров? да/нет: ') ==
                 analytics[merch_key].append(merch_value)
             else:
                 analytics[merch_key] = [merch_value]
-        print(analytics)
+            # for merch_value in analytics:
+
+    print(analytics)
 else:
     print('Программа завершена')
 # Не смог понять, как убрать повторяющиеся значения из словаря, поэтому при проведении аналитики товара повторяются
