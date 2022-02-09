@@ -8,5 +8,9 @@ def fact(n):
     for el in range(1, n):
         yield el
 
-for el in fact(9):
-    print(factorial(el))
+fact_list = []
+fact_number = int(input('Введите число: '))
+for el in fact(fact_number + 1):
+    fact_list.append(factorial(el))
+
+print(f'Факториалы чисел от 1 до {fact_number} - {fact_list}')
