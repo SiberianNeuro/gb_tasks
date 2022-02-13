@@ -1,0 +1,10 @@
+Ivanov 23543.12
+Petrov 13749.32
+Sidorov 12834.11
+Popov 27438.34
+Fedorov 53423.65
+Manulov 34095.65
+Plyushkin 17340.56
+Chichikov 12893.34
+Nosov 12039.56
+Gimalaev 83475.76
