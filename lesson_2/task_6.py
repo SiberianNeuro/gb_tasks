@@ -43,14 +43,16 @@ analytics = {}
 if input('Провести аналитику товаров? да/нет: ') == 'да':
     for merch_pos in merch_list:
         for merch_key, merch_value in merch_pos[1].items():
-            if merch_key in analytics:
+            if merch_key in analytics and merch_value not in analytics:
                 analytics[merch_key].append(merch_value)
             else:
                 analytics[merch_key] = [merch_value]
-            # for merch_value in analytics:
+    # for i, j in analytics.items():
+        # analytics[i] = [list(set(j))]
 
     print(analytics)
 else:
     print('Программа завершена')
+
 # Не смог понять, как убрать повторяющиеся значения из словаря, поэтому при проведении аналитики товара повторяются
 # значения единиц измерения.

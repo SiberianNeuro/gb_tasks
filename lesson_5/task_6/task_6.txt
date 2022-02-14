@@ -1,0 +1,5 @@
+Physculture: - 30(practice) -
+Physics: 50(lecture) 30(practice) 20(lab)
+Informatics: 40(lecture) 20(practice) 10(lab)
+Philosophy: 20(lecture) - -
+Chemistry: 15(lecture) - 10(lab)
