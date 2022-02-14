@@ -8,7 +8,7 @@
 workers_lastname = []
 workers_counter = 0
 salary_summ = 0
-with open("task_file.txt") as f_obj:
+with open("task_file.txt", 'r', encoding='utf-8') as f_obj:
     for line in f_obj:
         print(line)
         worker_salary = line.split(' ')
@@ -21,4 +21,4 @@ print('Сотрудники с доходом выше 20 000 р.:')
 for ind, el in enumerate(workers_lastname, 1):
     print(ind, el)
 
-# При попытке создать файл на кириллице возникает ошибка декодирования, не смог решить данный вопрос.
+
