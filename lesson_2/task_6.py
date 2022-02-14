@@ -43,12 +43,12 @@ analytics = {}
 if input('Провести аналитику товаров? да/нет: ') == 'да':
     for merch_pos in merch_list:
         for merch_key, merch_value in merch_pos[1].items():
-            if merch_key in analytics and merch_value not in analytics:
+            if merch_key in analytics:
                 analytics[merch_key].append(merch_value)
             else:
                 analytics[merch_key] = [merch_value]
-    # for i, j in analytics.items():
-        # analytics[i] = [list(set(j))]
+    for i, j in analytics.items():
+        analytics[i] = list(set(j))
 
     print(analytics)
 else:
