@@ -25,8 +25,6 @@ with open("task_7.txt", 'r', encoding='utf-8') as f_obj:
         firm_dict[line[0]] = int(line[2]) - int(line[3])
         average_profit_1 += (int(line[2]) - int(line[3]))
         firm_counter += 1
-        print(average_profit_1)
-        print(firm_counter)
     average_profit_1 = int(average_profit_1 / firm_counter)
     average_profit_dict = dict(average_profit = average_profit_1)
     firm_list.append(average_profit_dict)
