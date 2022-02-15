@@ -9,3 +9,29 @@
 
 # Задачу можно усложнить, реализовав проверку порядка режимов.
 # При его нарушении выводить соответствующее сообщение и завершать скрипт.
+
+
+
+class TrafficLight():
+    __color = ('Красный', 'Желтый', 'Зеленый')
+
+    def running(self):
+        from time import sleep
+        from itertools import cycle
+        for color_number in cycle(range(3)):
+            if color_number == 0:
+                print(f'Происходит переключение сигнала светофора на \033[31m{TrafficLight.__color[color_number].upper()}\033[0m свет')
+                sleep(7)
+            elif color_number == 1:
+                print(f'Происходит переключение сигнала светофора на \033[33m{TrafficLight.__color[color_number].upper()}\033[0m свет')
+                sleep(2)
+            elif color_number == 2:
+                print(f'Происходит переключение сигнала светофора на \033[32m{TrafficLight.__color[color_number].upper()}\033[0m свет')
+                sleep(5)
+
+
+crossroad_light = TrafficLight()
+crossroad_light.running()
+
+
+        
