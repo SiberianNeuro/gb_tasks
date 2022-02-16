@@ -7,19 +7,30 @@
 # Вторым пунктом необходимо предусмотреть условие, при котором повторение элементов списка прекратится.
 
 from itertools import count, cycle
-my_list = []
-for el in count(3):
-    if el > 10:
-        break
-    else:
-        my_list.append(el)
-print(f'Представление итератора на функции "Count" - {my_list}')
 
-my_list_2 = []
-c = 0
-for el_1 in cycle([1, 2, 3]):
-    if c > 8:
-        break
-    my_list_2.append(el_1)
-    c += 1
-print(f'Представление итератора на функции "Cycle" - {my_list_2}')
+
+def count_iter(a, b):
+    my_list = []
+    for el in count(a):
+        if el > b:
+            break
+        else:
+            my_list.append(el)
+    print(f'Представление итератора на функции "Count" - {my_list}')
+
+
+count_iter(3, 10)
+
+
+def cycle_iter(a, b):
+    my_list_2 = []
+    c = 0
+    for el_1 in cycle(range(a)):
+        if c > b:
+            break
+        my_list_2.append(el_1)
+        c += 1
+    print(f'Представление итератора на функции "Cycle" - {my_list_2}')
+
+
+cycle_iter(3, 8)
