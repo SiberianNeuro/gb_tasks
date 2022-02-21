@@ -5,7 +5,7 @@
 # (например, месяц — от 1 до 12). Проверить работу полученной структуры на реальных данных.
 
 class Data():
-    global day, month, year
+
     day = 0
     month = 0
     year = 0
@@ -17,27 +17,33 @@ class Data():
     @classmethod
     def reformer(cls, self):
         cls.data = list(map(int, self.data.split('-')))
-        day = cls.data[0]
-        month = cls.data[1]
-        year = cls.data[2]
+        Data.day = cls.data[0]
+        Data.month = cls.data[1]
+        Data.year = cls.data[2]
         return f'Число: {cls.data[0]}\nМесяц: {cls.data[1]}\nГод: {cls.data[2]}'
 
     @staticmethod
     def DataTest():
-        if year > 2022:
-            print('Неверно указан год')
-        elif month < 1 and month > 12:
-            print('Неверно указан месяц')
-        elif day < 1 and day > 31:
-            print('Неверно указан день')
+        if 0 < Data.year <= 2022:
+            print('Год указан валидно')
         else:
-            print('Дата валидна')
+            print('Невалидный год')
+        if 1 <= Data.month <= 12:
+            print('Месяц указан валидно')
+        else:
+            print('Невалидный месяц')
+        if 1 <= Data.day <= 31:
+            print('День указан валидно')
+        else:
+            print('Невалидный день')
 
 
 
-x = Data('22-11-1995')
+
+
+x = Data('1-0-0')
 print(Data.reformer(x))
-print(Data.DataTest())
+Data.DataTest()
 
 # Неясно, откуда взялось None при проверке кода
 
